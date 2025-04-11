@@ -1,0 +1,96 @@
+// All Tasks implemented in this HTML file.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Assignment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: #f0e68c;
+      padding: 20px;
+    }
+    h1 {
+      color: #d4af37;
+    }
+    .task {
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .task h2 {
+      margin-top: 0;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Assignment</h1>
+
+  <div class="task">
+    <h2>Task 1: Age and Adulthood Check</h2>
+    <p id="task1"></p>
+  </div>
+
+  <div class="task">
+    <h2>Task 2: Arithmetic Operations</h2>
+    <p id="task2"></p>
+  </div>
+
+  <div class="task">
+    <h2>Task 3: Even or Odd</h2>
+    <p id="task3"></p>
+  </div>
+
+  <div class="task">
+    <h2>Task 4: Numbers in Array</h2>
+    <p id="task4"></p>
+  </div>
+
+  <div class="task">
+    <h2>Task 5: Square Function</h2>
+    <p id="task5"></p>
+  </div>
+
+  <script>
+    // Task 1
+    let age = 25;
+    let isAdult = age >= 18;
+    document.getElementById("task1").innerText = `Age: ${age} → Is Adult? ${isAdult}`;
+
+    // Task 2
+    let x = 10;
+    let y = 5;
+    let addition = x + y;
+    let multiplication = x * y;
+    let modulus = x % y;
+    document.getElementById("task2").innerText = 
+      `x = ${x}, y = ${y}\nAddition: ${addition}, Multiplication: ${multiplication}, Modulus: ${modulus}`;
+
+    // Task 3
+    let n = 7;
+    let result = (n % 2 === 0) ? "Even" : "Odd";
+    document.getElementById("task3").innerText = `Number: ${n} → ${result}`;
+
+    // Task 4
+    let numbers = [];
+    for (let i = 1; i <= 5; i++) {
+      numbers.push(i);
+    }
+    document.getElementById("task4").innerText = `Array: [${numbers.join(', ')}]`;
+
+    // Task 5
+    function square(number) {
+      return number * number;
+    }
+    let squareResult = square(6);
+    document.getElementById("task5").innerText = `Square of 6 is: ${squareResult}`;
+  </script>
+
+</body>
+</html>
